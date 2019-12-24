@@ -2,6 +2,20 @@
 anaokulu veli bilgilendirme sistemi, öğrencilerin beslenmesinden uyumasına, okul içindeki faaliyetinden ilaç kullanma durumuna kadar her şeyi kağıda ya da deftere ihtiyaç duymadan takip edebilirsiniz. aynı zamanda hem öğrencilerden hem de anaokulunda yapılan tüm faaliyetlerden aileleri haberdar edebilirsiniz.
 
 ## güncellemeler
+**[24.12.2019]**
+- **Servisler Oluşturuldu**
+    - Authentication (Yetkilendirme)
+    - Guard (İzin gerektiren sayfalar için koruma)
+    - SQL (Veritabanında offline depolama için)
+    - Storage (TOKEN depolama için)
+    - Toast (Uyarı ekranları için)
+- **Sayfalar Oluşturuldu**
+    - Public (Herkese açık)
+        - Welcome (Uygulama karşılama ekranı)
+        - Login (Giriş yap)
+        - Signup (Kayıt ol)
+    - Private (Sadece sisteme giriş yapan kullanıcılar için)
+        - Home (Anasayfa)
 
 ## uygulama ekran görüntüleri
 
