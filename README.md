@@ -1,5 +1,5 @@
 # anaokulu veli bilgilendirme sistemi
-anaokulu veli bilgilendirme sistemi, geçtiğimiz yıllarda kullanılmış olan ve aslında günümüzde hala bazı anaokullarınca kullanılmakta olan eski model veli iletişim defterinin yerine anaokullarının kullandığı ve mobil uygulama formunda olan bir iletişim yoludur.
+anaokulu veli bilgilendirme sistemi, öğrencilerin beslenmesinden uyumasına, okul içindeki faaliyetinden ilaç kullanma durumuna kadar her şeyi kağıda ya da deftere ihtiyaç duymadan takip edebilirsiniz. aynı zamanda hem öğrencilerden hem de anaokulunda yapılan tüm faaliyetlerden aileleri haberdar edebilirsiniz.
 
 ## güncellemeler
 
