@@ -5,6 +5,7 @@ anaokulu veli bilgilendirme sistemi, öğrencilerin beslenmesinden uyumasına, o
 **[25.12.2019]**
 - **Sayfa**
     - Karşılama sayfası düzenlendi.
+
 **[24.12.2019]**
 - **Servisler**
     - Authentication (Yetkilendirme)
