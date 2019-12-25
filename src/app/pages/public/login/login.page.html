@@ -1,9 +1,27 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
+  <ion-toolbar color="firststep">
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="/welcome"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Giriş Yap</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="logo-content" text-center>
+    <app-logo></app-logo>
+    <p><b>İlk Adım Anaokulu</b></p>
+  </div>
+  <ion-item>
+    <ion-label position="floating">Öğrenci Numarası</ion-label>
+    <ion-input autocomplete="off"  type="number" [(ngModel)]="formData.StudentID"></ion-input>
+  </ion-item>
 
+  <ion-item>
+    <ion-label position="floating">Şifre</ion-label>
+    <ion-input autocomplete="off" ngModel type="password" [(ngModel)]="formData.StudentPassword"></ion-input>
+  </ion-item>
+
+  <ion-button type="submit" expand="full" color="primary" (click)="login()">Giriş Yap</ion-button>
+  <ion-button type="submit" expand="full" color="firststep" routerLink="/signup">Kayıt Ol</ion-button>
 </ion-content>

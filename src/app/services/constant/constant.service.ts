@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class ConstantService {
 
   // API URL
-  API_URL = 'http://localhost/okulApi/'
+  API_URL = 'http://192.168.1.22/okulApi/'
 
   // TOKEN
   AUTH = 'userData'

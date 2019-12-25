@@ -3,17 +3,25 @@ anaokulu veli bilgilendirme sistemi, öğrencilerin beslenmesinden uyumasına, o
 
 ## güncellemeler
 **[25.12.2019]**
+- **Component**
+    - Logo eklendi.
+
 - **Sayfa**
     - Karşılama sayfası düzenlendi.
+    - Kayıt olma aktif edildi.
+    - Giriş yapma aktif edildi.
+- **Servis**
+    - Kayıt, Giriş, Çıkış için Auth servisi güncellendi.
+    - Uyarılar için Toast servisi güncellendi.
 
 **[24.12.2019]**
-- **Servisler**
+- **Servis**
     - Authentication (Yetkilendirme)
     - Guard (İzin gerektiren sayfalar için koruma)
     - SQL (Veritabanında offline depolama için)
     - Storage (TOKEN depolama için)
     - Toast (Uyarı ekranları için)
-- **Sayfalar**
+- **Sayfa**
     - Public (Herkese açık)
         - Welcome (Uygulama karşılama ekranı)
         - Login (Giriş yap)
