@@ -1,0 +1,22 @@
+p.baslik {
+    margin-bottom:0px; 
+    margin-left:10px;
+    color:#fff;
+    padding-bottom:10px;
+}
+
+ion-icon {
+    vertical-align: -2px;
+}
+.list-md-lines-full .item:last-child, .list-md .item-lines-full:last-child {
+    --border-width: 0;
+    border-width: 0;
+}
+
+.tarih {
+    float:right; font-size:10px; margin-top:15px;
+}
+
+ion-card {
+    --background:#521c4c
+}

@@ -2,12 +2,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PrivatePage } from './private.page';
 import { PrivateGuard } from '../../guards/private/private.guard'
+import { UserdataService } from '../../services/resolver/userdata.service';
 
 const routes: Routes = [
   {
     path: 'dashboard',
     component: PrivatePage,
     canActivate: [PrivateGuard],
+    resolve: {
+      userData: UserdataService
+    },
     children: [
       {
         path: '',
@@ -18,8 +22,14 @@ const routes: Routes = [
         path: 'home',
         loadChildren: './home/home.module#HomePageModule'
       }
+      ,
+      {
+        path: 'profile',
+        loadChildren: './profile/profile.module#ProfilePageModule'
+      }
     ]
   }
+
 ];
 
 @NgModule({

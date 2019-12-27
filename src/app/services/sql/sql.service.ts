@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
 
 declare var window: any;
-const DB_NAME = 'portal.db';
-const DB_PATH = 'assets/portal.sql';
+const DB_NAME = 'ilkadim.db';
+const DB_PATH = 'assets/student.sql';
 
 @Injectable({
   providedIn: 'root'
@@ -47,7 +47,7 @@ export class SQLService {
       });
     } else {
       console.log('browser');
-      const open = await window.openDatabase(DB_NAME, '1.0', 'Portal DB', 5 * 1024 * 1024);
+      const open = await window.openDatabase(DB_NAME, '1.0', 'Student DB', 5 * 1024 * 1024);
       this.db = webDB(open);
     }
     await this.storage.get('db').then(status => {

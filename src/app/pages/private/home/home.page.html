@@ -1,9 +1,83 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
+  <ion-toolbar color="firststep">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Anasayfa
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <!-- son duyurular -->
+  <ion-card>
+    <p class="baslik">
+      <b>
+        <ion-icon name="mail"></ion-icon> Okunmamış Mesajlar
+      </b>
+    </p>
+    <ion-list lines="full">
+      <ion-item>
+        <ion-label>
+          <ion-icon name="arrow-dropright"></ion-icon>
+          Lorem Ipsum Dolor
+          <div class="tarih">01.12.2020</div>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <!-- yaklaşan etkinlikler -->
+  <ion-card>
+    <p class="baslik">
+      <b>
+        <ion-icon name="megaphone"></ion-icon> Yaklaşan Etkinlikler
+      </b>
+    </p>
+    <ion-list lines="full">
+      <ion-item>
+        <ion-label>
+          <ion-icon name="arrow-dropright"></ion-icon>
+          Lorem Ipsum Dolor
+          <div class="tarih">01.12.2020</div>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
 
+  <!-- ödevler -->
+  <ion-card>
+    <p class="baslik">
+      <b>
+        <ion-icon name="print"></ion-icon> Ödevler
+      </b>
+    </p>
+    <ion-list lines="full">
+      <ion-item>
+        <ion-label>
+          <ion-icon name="arrow-dropright"></ion-icon>
+          Lorem Ipsum Dolor
+          <div class="tarih">01.12.2020</div>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <!-- yaklaşan sınavlar -->
+  <ion-card>
+    <p class="baslik">
+      <b>
+        <ion-icon name="calendar"></ion-icon> Yaklaşan Sınavlar
+      </b>
+    </p>
+    <ion-list lines="full">
+      <ion-item>
+        <ion-label>
+          <ion-icon name="arrow-dropright"></ion-icon>
+          Lorem Ipsum Dolor
+          <div class="tarih">01.12.2020</div>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
 </ion-content>

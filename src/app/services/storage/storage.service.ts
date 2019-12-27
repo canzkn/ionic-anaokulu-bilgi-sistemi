@@ -9,16 +9,13 @@ export class StorageService {
 
   // Set store data
   async setData(key: string, value: any) {
-
     const hashedVal = btoa(escape(JSON.stringify(value)));
     const res = await this.storage.set(key, hashedVal);
-    console.log(res);
   }
 
   // Get stored data
   async getData(key: string) {
     const keyVal = await this.storage.get(key);
-    console.log('Key is', keyVal);
     return JSON.parse(unescape(atob(keyVal)));
   }
 

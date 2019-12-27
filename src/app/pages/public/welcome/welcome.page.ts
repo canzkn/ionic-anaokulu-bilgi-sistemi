@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SQLService } from '../../../services/sql/sql.service';
 
 @Component({
   selector: 'app-welcome',
@@ -11,9 +12,10 @@ export class WelcomePage implements OnInit {
     speed: 400
   };
 
-  constructor() { }
+  constructor(private sqlService: SQLService) { }
 
   ngOnInit() {
+    this.sqlService.getDbState();
   }
 
 }

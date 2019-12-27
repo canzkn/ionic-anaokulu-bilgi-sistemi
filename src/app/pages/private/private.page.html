@@ -3,9 +3,10 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-content class="ogrenciHeader" text-center>
-            <img src="../../../assets/img/default-avatar.jpg">
-            <p>Hasan Can Özkan (160201145)</p>
-            <p>Sınıf: 1A</p>
+            <img *ngIf="!studentDataDB.StudentPicture" src="../../../assets/img/default-avatar.jpg">
+            <img *ngIf="studentDataDB.StudentPicture" [src]="studentDataDB.StudentPicture">
+            <p>{{studentDataDB.StudentName}} ({{studentDataDB.StudentID}})</p>
+            <p>Sınıf: {{studentDataDB.StudentClass}}</p>
         </ion-content>
         <ion-list lines="full">
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
@@ -16,6 +17,12 @@
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
+          <ion-item (click)="logout()">
+            <ion-icon slot="start" name="log-out"></ion-icon>
+            <ion-label>
+              Çıkış Yap
+            </ion-label>
+          </ion-item>
         </ion-list>
       </ion-content>
     </ion-menu>

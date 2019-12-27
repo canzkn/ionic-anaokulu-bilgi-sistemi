@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastService } from '../../../services/toast/toast.service';
 import { AuthService } from '../../../services/auth/auth.service';
+import { SQLService } from '../../../services/sql/sql.service';
 
 @Component({
   selector: 'app-signup',
@@ -20,7 +21,8 @@ export class SignupPage implements OnInit {
   constructor(
     private router: Router, 
     private toastService: ToastService, 
-    private auth: AuthService
+    private auth: AuthService,
+    private sqlService: SQLService
     ) { }
 
   ngOnInit() {
@@ -70,6 +72,16 @@ export class SignupPage implements OnInit {
           if(res.message == 'USER_CREATE_SUCCESS')
           {
             this.toastService.success("Üye kayıt işlemi başarılı!");
+            
+            this.sqlService.db.executeSql('INSERT INTO students (StudentID, StudentName, StudentBirthday, StudentSize, StudentKilo, StudentPicture, StudentClass) VALUES ("' + this.formData.StudentID + '", "'+this.formData.StudentName+'", "1970-01-01", "0", "0", "uploads/default.jpg", "Tanımsız")', [])
+              .then(() => {
+                console.log('Row Inserted!');
+              })
+              .catch(e => {
+                alert("error " + JSON.stringify(e))
+              });
+
+
             this.router.navigate(['login'])
           }
           
@@ -90,5 +102,7 @@ export class SignupPage implements OnInit {
       return false;
     }
   }
+
+  
 
 }
