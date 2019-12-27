@@ -47,28 +47,18 @@ export class PrivatePage implements OnInit {
       icon: 'mail'
     },
     {
-      title: 'Etkinlik',
+      title: 'Etkinlikler',
       url: '/dashboard/activity',
       icon: 'megaphone'
     },
     {
-      title: 'Ödev',
-      url: '/dashboard/homework',
-      icon: 'print'
-    },
-    {
-      title: 'Ders Programı',
-      url: '/dashboard/syllabus',
+      title: 'Gün Sonu Raporu',
+      url: '/dashboard/endofday',
       icon: 'calendar'
     },
     {
-      title: 'Yemek Listesi',
-      url: '/dashboard/foodlist',
-      icon: 'restaurant'
-    },
-    {
       title: 'Öğretmenlerim',
-      url: '/dashboard/myteacher',
+      url: '/dashboard/teachers',
       icon: 'contacts'
     }
   ];

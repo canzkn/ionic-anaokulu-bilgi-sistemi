@@ -5,6 +5,7 @@ import { AuthService } from '../../../services/auth/auth.service';
 import { StorageService } from '../../../services/storage/storage.service';
 import { ConstantService } from '../../../services/constant/constant.service';
 import { StudentService } from '../../../services/student/student.service';
+import { ParentService } from '../../../services/parent/parent.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -25,7 +26,8 @@ export class LoginPage implements OnInit {
     private auth: AuthService,
     private storageService: StorageService,
     private constantService: ConstantService,
-    private studentService: StudentService
+    private studentService: StudentService,
+    private parentService: ParentService,
   ) { }
 
   ngOnInit() {
@@ -61,21 +63,41 @@ export class LoginPage implements OnInit {
             this.studentService.isStudentInDB(this.formData.StudentID).then(data => {
               if(data.result === 0)
               {
-                console.log("yok")
+                console.log("öğrenci yok")
                 this.studentService.getStudent(res.data).subscribe(
                   data => {
                     console.log(data);
                     this.studentService.addStudentDB(data)
+                  
+                    this.parentService.isParentInDB(this.formData.StudentID).then(parentData => {
+                      if(parentData.result === 0)
+                      {
+                        console.log("veli yok")
+                        this.parentService.getParent(res.data).subscribe(
+                          gettedParent => {
+                            console.log(gettedParent)
+                            this.parentService.addParentDB(gettedParent)
+                          }
+                        )
+                      }
+                    })
                   }
-                )
+                )                
               }
               else
               {
-                console.log("var")
+                console.log("öğrenci var")
                 this.studentService.getStudent(res.data).subscribe(
                   data => {
                     console.log(data);
                     this.studentService.updateStudentDB(data)
+                  }
+                )
+
+                this.parentService.getParent(res.data).subscribe(
+                  data => {
+                    console.log(data)
+                    this.parentService.updateParentDB(data)
                   }
                 )
               }

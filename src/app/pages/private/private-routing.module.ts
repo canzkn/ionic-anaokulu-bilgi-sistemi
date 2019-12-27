@@ -26,14 +26,33 @@ const routes: Routes = [
       {
         path: 'profile',
         loadChildren: './profile/profile.module#ProfilePageModule'
+      },
+      {
+        path: 'parent',
+        loadChildren: './parent/parent.module#ParentPageModule'
+      },
+      {
+        path: 'messages',
+        loadChildren: './messages/messages.module#MessagesPageModule'
+      },
+      {
+        path: 'activity',
+        loadChildren: './activity/activity.module#ActivityPageModule'
+      },
+      {
+        path: 'endofday',
+        loadChildren: './endofday/endofday.module#EndofdayPageModule'
+      },
+      {
+        path: 'teachers',
+        loadChildren: './teachers/teachers.module#TeachersPageModule'
       }
     ]
   }
-
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PrivatePageRoutingModule {}
+export class PrivatePageRoutingModule { }

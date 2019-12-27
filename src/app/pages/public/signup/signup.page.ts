@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { ToastService } from '../../../services/toast/toast.service';
 import { AuthService } from '../../../services/auth/auth.service';
 import { SQLService } from '../../../services/sql/sql.service';
+import { StudentService } from '../../../services/student/student.service';
+import { ParentService } from '../../../services/parent/parent.service';
 
 @Component({
   selector: 'app-signup',
@@ -15,14 +17,21 @@ export class SignupPage implements OnInit {
     StudentID : '',
     StudentName : '',
     StudentPassword : '',
-    StudentPasswordAgain : ''
+    StudentPasswordAgain : '',
+    StudentBirthday: '0000-00-00',
+    StudentSize: '0',
+    StudentKilo: '0',
+    StudentPicture: 'uploads/default.jpg',
+    StudentClass: 'Tanımsız',
   }
 
   constructor(
     private router: Router, 
     private toastService: ToastService, 
     private auth: AuthService,
-    private sqlService: SQLService
+    private sqlService: SQLService,
+    private studentService: StudentService,
+    private parentService: ParentService
     ) { }
 
   ngOnInit() {
@@ -72,16 +81,8 @@ export class SignupPage implements OnInit {
           if(res.message == 'USER_CREATE_SUCCESS')
           {
             this.toastService.success("Üye kayıt işlemi başarılı!");
-            
-            this.sqlService.db.executeSql('INSERT INTO students (StudentID, StudentName, StudentBirthday, StudentSize, StudentKilo, StudentPicture, StudentClass) VALUES ("' + this.formData.StudentID + '", "'+this.formData.StudentName+'", "1970-01-01", "0", "0", "uploads/default.jpg", "Tanımsız")', [])
-              .then(() => {
-                console.log('Row Inserted!');
-              })
-              .catch(e => {
-                alert("error " + JSON.stringify(e))
-              });
-
-
+            this.studentService.addStudentDB(this.formData)
+            this.parentService.addParentDB(this.formData)
             this.router.navigate(['login'])
           }
           
