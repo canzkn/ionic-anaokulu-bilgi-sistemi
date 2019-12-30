@@ -1,6 +1,6 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay" *ngIf = "!(isWelcomePage() || isLoginPage() || isRegisterPage())">
+    <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-content class="ogrenciHeader" text-center>
             <img *ngIf="!studentDataDB.StudentPicture" src="../../../assets/img/default-avatar.jpg">
