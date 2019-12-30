@@ -12,6 +12,7 @@ import { SQLite } from '@ionic-native/sqlite/ngx';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule } from '@angular/common/http';
 import { Camera } from '@ionic-native/camera/ngx';
+import { PopoverPageModule } from './pages/popover/popover.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,7 @@ import { Camera } from '@ionic-native/camera/ngx';
     AppRoutingModule,
     IonicStorageModule.forRoot(),
     HttpClientModule,
+    PopoverPageModule
   ],
   providers: [
     StatusBar,
