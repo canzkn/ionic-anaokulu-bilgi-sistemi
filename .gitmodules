@@ -1,3 +1,6 @@
 [submodule "src/app/message-box"]
 	path = src/app/message-box
 	url = https://github.com/2019-BLM441/module-160201145.git
+[submodule "src/app/student"]
+	path = src/app/student
+	url = https://github.com/2019-BLM441/module-160201139.git
