@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="firststep">
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="/welcome"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Kayıt Ol</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="logo-content" text-center>
+    <app-logo></app-logo>
+    <p><b>İlk Adım Anaokulu</b></p>
+  </div>
+  <ion-item>
+    <ion-label position="floating">Öğrenci Numarası</ion-label>
+    <ion-input autocomplete="off" type="number" [(ngModel)]="formData.StudentID"  (keypress)="codeInput($event)"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Öğrenci Adı ve Soyadı</ion-label>
+    <ion-input autocomplete="off" type="text" [(ngModel)] ="formData.StudentName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Şifre</ion-label>
+    <ion-input autocomplete="off" type="password" [(ngModel)] ="formData.StudentPassword"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Şifre Tekrar</ion-label>
+    <ion-input autocomplete="off" type="password" [(ngModel)] ="formData.StudentPasswordAgain"></ion-input>
+  </ion-item>
+
+  <ion-button type="submit" expand="full" color="firststep" (click) = "signup()">Kayıt Ol</ion-button>
+</ion-content>
+
