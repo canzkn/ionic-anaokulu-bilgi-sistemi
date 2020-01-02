@@ -15,7 +15,13 @@ const routes: Routes = [
     resolve: {userData: UserdataService},
     children: [
       { path: '', redirectTo: 'dashboard/home', pathMatch: 'full' },
-      { path: 'home', loadChildren: './home/home.module#HomePageModule'}
+      { path: 'home', loadChildren: './home/home.module#HomePageModule'},
+      { path: 'conversations', loadChildren: './conversations/conversation.module#ConversationModule'},
+      { path: 'student', loadChildren: './student/student.module#StudentModule'},
+      { path: 'parent', loadChildren: './parent/parent.module#ParentModule'},
+      { path: 'activities', loadChildren: './activities/activity.module#ActivityModule'},
+      { path: 'teachers', loadChildren: './teachers/teachers.module#TeachersModule'},
+      { path: 'reports', loadChildren: './reports/reports.module#ReportsModule'},
     ]
   }
 ];

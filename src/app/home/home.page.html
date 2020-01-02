@@ -10,5 +10,75 @@
 </ion-header>
 
 <ion-content>
+  <!-- son duyurular -->
+  <ion-card>
+    <p class="baslik">
+      <b>
+        <ion-icon name="mail"></ion-icon> Okunmamış Mesajlar
+      </b>
+    </p>
+    <ion-list lines="full" *ngFor="let item of conversations">
+      <ion-item (click)="chooseConversation(item.ConversationID)" *ngIf="item.ConversationStatus == '1'">
+        <ion-label>
+          <h2><b>{{item.TeacherName}}</b></h2>
+          <h3>{{item.ConversationTitle}}</h3>
+          <p>{{item.ConversationLatestMessage}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <!-- etkinlikler -->
+  <ion-card>
+    <p class="baslik">
+      <b>
+        <ion-icon name="megaphone"></ion-icon> Favori Etkinlikler
+      </b>
+    </p>
+    <ion-list lines="full" *ngIf="activities.length == 0">
+      <ion-item>
+        <ion-label text-center>
+          <span style="font-size:12px; color:rgb(114, 114, 114)">Henüz favori etkinlik eklenmedi.</span>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-list lines="full" *ngFor="let item of activities">
+      <ion-item (click)="activityDetail($event, item.ActivityContent)">
+        <ion-label>
+          <ion-icon name="arrow-dropright"></ion-icon>
+          {{item.ActivityTitle}}
+          <div class="tarih">{{item.ActivityDate | date: 'dd/MM/yyyy'}}</div>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+
+  <!-- öğretmenler -->
+  <ion-card>
+    <p class="baslik">
+      <b>
+        <ion-icon name="contacts"></ion-icon> Favori Öğretmenler
+      </b>
+    </p>
+    <ion-list lines="full" *ngIf="teachers.length == 0">
+      <ion-item>
+        <ion-label text-center>
+          <span style="font-size:12px; color:rgb(114, 114, 114)">Henüz favori öğretmen eklenmedi.</span>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-list lines="full" *ngFor="let item of teachers">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img [src]="api_url + item.TeacherPicture">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{item.TeacherName}}</h2>
+          <h3><b>Branş: </b>{{item.TeacherDepartment}}</h3>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
 
 </ion-content>

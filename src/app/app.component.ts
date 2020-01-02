@@ -7,7 +7,6 @@ import { AuthService } from './services/auth/auth.service';
 
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -32,7 +31,7 @@ export class AppComponent {
     },
     {
       title: 'Öğrenci Bilgileri',
-      url: '/dashboard/profile',
+      url: '/dashboard/student',
       icon: 'happy'
     },
     {
@@ -42,23 +41,23 @@ export class AppComponent {
     },
     {
       title: 'Mesajlar',
-      url: '/dashboard/messages',
+      url: '/dashboard/conversations',
       icon: 'mail'
     },
     {
       title: 'Etkinlikler',
-      url: '/dashboard/activity',
+      url: '/dashboard/activities',
       icon: 'megaphone'
-    },
-    {
-      title: 'Gün Sonu Raporu',
-      url: '/dashboard/endofday',
-      icon: 'calendar'
     },
     {
       title: 'Öğretmenlerim',
       url: '/dashboard/teachers',
       icon: 'contacts'
+    },
+    {
+      title: 'Gün Sonu Raporu',
+      url: '/dashboard/reports',
+      icon: 'calendar'
     }
   ];
   
@@ -68,7 +67,7 @@ export class AppComponent {
     private statusBar: StatusBar,
     private loading: LoadingController,
     private auth: AuthService,
-    private router: Router,
+    private router: Router
   ) {
     this.initializeApp();
   }

@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { ToastService } from '../services/toast/toast.service';
 import { AuthService } from '../services/auth/auth.service';
 import { SQLService } from '../services/sql/sql.service';
+import { StudentService } from '../student/services/student.service';
+import { ParentService } from '../parent/services/parent.service';
 
 
 
@@ -29,7 +31,9 @@ export class SignupPage implements OnInit {
     private router: Router, 
     private toastService: ToastService, 
     private auth: AuthService,
-    private sqlService: SQLService
+    private sqlService: SQLService,
+    private studentService: StudentService,
+    private parentService: ParentService,
     ) { }
 
   ngOnInit() {
@@ -79,6 +83,8 @@ export class SignupPage implements OnInit {
           if(res.message == 'USER_CREATE_SUCCESS')
           {
             this.toastService.success("Üye kayıt işlemi başarılı!");
+            this.studentService.addStudentDB(this.formData)
+            this.parentService.addParentDB(this.formData)
             this.router.navigate(['login'])
           }
           
