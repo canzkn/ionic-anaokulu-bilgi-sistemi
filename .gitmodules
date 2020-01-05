@@ -7,9 +7,6 @@
 [submodule "src/app/reports"]
 	path = src/app/reports
 	url = https://github.com/2019-BLM441/module-150202142.git
-[submodule "src/app/student"]
-	path = src/app/student
-	url = https://github.com/2019-BLM441/module-160201139.git
 [submodule "src/app/conversations"]
 	path = src/app/conversations
 	url = https://github.com/2019-BLM441/module-160201145.git
