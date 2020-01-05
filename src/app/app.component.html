@@ -1,13 +1,12 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
-      <ion-content> 
-        <ion-content class="ogrenciHeader" text-center>
-            <img *ngIf="!studentDataDB.StudentPicture" src="../../../assets/img/default-avatar.jpg">
-            <img *ngIf="studentDataDB.StudentPicture" [src]="studentDataDB.StudentPicture">
-            <p>{{studentDataDB.StudentName}} ({{studentDataDB.StudentID}})</p>
-            <p>Sınıf: {{studentDataDB.StudentClass}}</p>
-        </ion-content>
+      <ion-header>
+        <ion-toolbar color="firststep">
+          <ion-title>Menü</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
         <ion-list lines="full">
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">

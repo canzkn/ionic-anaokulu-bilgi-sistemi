@@ -52,3 +52,12 @@ CREATE TABLE IF NOT EXISTS `dailyreport` (
 `fen` INTEGER,
 `StudentID` INTEGER
 );
+
+CREATE TABLE IF NOT EXISTS `drug_monitor` (
+`DrugID` INTEGER,
+`DrugName` TEXT,
+`DrugDate` TEXT,
+`DrugTime` TEXT,
+`DrugNote` TEXT,
+`StudentID` INTEGER
+);

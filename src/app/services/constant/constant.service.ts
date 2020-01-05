@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class ConstantService {
 
   // API URL
-  API_URL = 'http://canozkan.net/ilkadim/'
+  API_URL = 'https://canozkan.net/ilkadim/'
 
   // TOKEN
   AUTH = 'userData'

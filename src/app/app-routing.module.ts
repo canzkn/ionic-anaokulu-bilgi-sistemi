@@ -22,6 +22,7 @@ const routes: Routes = [
       { path: 'activities', loadChildren: './activities/activity.module#ActivityModule'},
       { path: 'teachers', loadChildren: './teachers/teachers.module#TeachersModule'},
       { path: 'reports', loadChildren: './reports/reports.module#ReportsModule'},
+      { path: 'drug_monitor', loadChildren: './drug-monitor/drugmonitor.module#DrugMonitorModule'},
     ]
   }
 ];

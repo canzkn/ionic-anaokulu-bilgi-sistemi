@@ -55,6 +55,11 @@ export class AppComponent {
       icon: 'contacts'
     },
     {
+      title: 'İlaç Takibi',
+      url: '/dashboard/drug_monitor',
+      icon: 'clock'
+    },
+    {
       title: 'Gün Sonu Raporu',
       url: '/dashboard/reports',
       icon: 'calendar'
