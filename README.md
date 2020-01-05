@@ -11,12 +11,6 @@ anaokulu veli bilgilendirme sistemi, öğrencilerin, okul içindeki faaliyetleri
 
 ## uygulama ekran görüntüleri
 
-### [Öğrenci Modülü]
-<img src="https://github.com/2019-BLM441/module-160201139/raw/master/OgrenciGuncelle.gif" width="420px" height="750px">
-
-### [Veli Modülü]
-<img src="https://github.com/2019-BLM441/module-160201138/raw/master/VeliGuncelle.gif">
-
 ### [Mesaj Kutusu Modülü]
 
 - **mesaj içeriği görme**
