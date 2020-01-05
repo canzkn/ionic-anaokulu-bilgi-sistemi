@@ -32,3 +32,10 @@ anaokulu veli bilgilendirme sistemi, öğrencilerin, okul içindeki faaliyetleri
 
 ### [Gün Sonu Raporu Modülü]
 <img src="https://github.com/2019-BLM441/module-150202142/raw/master/Rapor.gif">
+
+### [İlaç Takibi Modülü]
+- **ilaç ekleme**
+<img src="drug-monitor/assets/IlacEkle.gif">
+
+- **ilaç listeleme, filtreleme ve silme**
+<img src="drug-monitor/assets/IlacSilme.gif">
