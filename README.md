@@ -35,7 +35,7 @@ anaokulu veli bilgilendirme sistemi, öğrencilerin, okul içindeki faaliyetleri
 
 ### [İlaç Takibi Modülü]
 - **ilaç ekleme**
-<img src="drug-monitor/assets/IlacEkle.gif">
+<img src="https://github.com/2019-BLM441/module-160201138/raw/master/assets/IlacEkle.gif">
 
 - **ilaç listeleme, filtreleme ve silme**
-<img src="drug-monitor/assets/IlacSilme.gif">
+<img src="https://github.com/2019-BLM441/module-160201138/raw/master/assets/IlacSilme.gif">
