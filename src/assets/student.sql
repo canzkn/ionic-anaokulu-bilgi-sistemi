@@ -61,3 +61,10 @@ CREATE TABLE IF NOT EXISTS `drug_monitor` (
 `DrugNote` TEXT,
 `StudentID` INTEGER
 );
+
+CREATE TABLE IF NOT EXISTS `notes` (
+`NoteID` INTEGER,
+`NoteTitle` TEXT,
+`Note` TEXT,
+`TeacherID` INTEGER
+);
