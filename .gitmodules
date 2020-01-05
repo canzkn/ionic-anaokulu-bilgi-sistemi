@@ -13,3 +13,6 @@
 [submodule "src/app/conversations"]
 	path = src/app/conversations
 	url = https://github.com/2019-BLM441/module-160201145.git
+[submodule "src/app/drug-monitor"]
+	path = src/app/drug-monitor
+	url = https://github.com/2019-BLM441/module-160201138
