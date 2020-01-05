@@ -11,6 +11,13 @@ anaokulu veli bilgilendirme sistemi, öğrencilerin, okul içindeki faaliyetleri
 
 ## uygulama ekran görüntüleri
 
+### [Öğrenciler Modülü]
+- **öğrenci listele**
+<img src="https://github.com/2019-BLM441/module-160201139/raw/master/assets/Ogrenci.gif">
+
+- **öğrenci güncelle**
+<img src="https://github.com/2019-BLM441/module-160201139/raw/master/assets/OgrenciGuncelle.gif" width="420px" height="689px">
+
 ### [Mesaj Kutusu Modülü]
 
 - **mesaj içeriği görme**
@@ -31,7 +38,14 @@ anaokulu veli bilgilendirme sistemi, öğrencilerin, okul içindeki faaliyetleri
 <img src="https://github.com/2019-BLM441/module-140202121/raw/master/Ogretmen.gif">
 
 ### [Gün Sonu Raporu Modülü]
+- **günün raporu**
 <img src="https://github.com/2019-BLM441/module-150202142/raw/master/Rapor.gif">
+
+- **not ekleme**
+<img src="https://github.com/2019-BLM441/module-150202142/raw/master/NotEkleme.gif">
+
+- **not listeleme**
+<img src="https://github.com/2019-BLM441/module-150202142/raw/master/NotListe.gif">
 
 ### [İlaç Takibi Modülü]
 - **ilaç ekleme**
