@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="firststep">
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="/dashboard/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Veli Bilgileri
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content> 
+  <!-- öğrenci profili -->
+  <ion-content>
+    <ion-item>
+      <ion-label position="floating">Veli Adı Soyadı</ion-label>
+      <ion-input autocomplete="off"  type="text" [(ngModel)]="parentData.ParentName" [readonly]="isReadOnly()"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">E-Posta Adresi</ion-label>
+      <ion-input autocomplete="off"  type="text" [(ngModel)]="parentData.ParentEmail" [readonly]="isReadOnly()"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Veli Telefon Numarası</ion-label>
+      <ion-input autocomplete="off"  type="text" [(ngModel)]="parentData.ParentPhoneNumber" [readonly]="isReadOnly()"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Meslek</ion-label>
+      <ion-input autocomplete="off"  type="text" [(ngModel)]="parentData.ParentJob" [readonly]="isReadOnly()"></ion-input>
+    </ion-item>
+    <div *ngIf="isReadOnly()">
+      <ion-button expand="full" color="danger" (click)="setReadOnly()">Düzenle</ion-button>
+    </div>
+    <div *ngIf="!isReadOnly()">
+      <ion-button expand="full" color="success" (click)="save()">Kaydet</ion-button>
+    </div>
+  </ion-content>
+</ion-content>
